@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "name": "slides-how-to-fix-library-for-ts-world",
+    "description": "",
+    "version": "0.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "Piotr Kowalski",
+        "email": "piecioshka@gmail.com",
+        "url": "https://piecioshka.pl/"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:piecioshka/slides-how-to-fix-library-for-ts-world.git"
+    }
+}
