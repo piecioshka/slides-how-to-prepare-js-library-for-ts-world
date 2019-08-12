@@ -6,11 +6,31 @@ class: middle, slide-front-page, slide-invert-colors
 
 ---
 
-Jesteś autorem biblioteki w npm? Myślisz o stworzeniu takiej? Jeśli tak,
-to powinieneś pomyśleć o projektach napisanych w TypeScript, w których
-warto zadbać o odpowiednie DefinitelyTyped, tak aby edytory wiedziały,
-jak wygląda API Twojego liba. Podczas tej prelekcji dowiesz się, co to jest
-DefinitelyTyped, jak je zbudować dla swojej biblioteki.
+class: middle, slide-invert-colors, slide-fullscreen-background
+background-image: url(images/me.jpg)
+
+# O mnie
+
+---
+
+class: slide-background-purple
+
+### Pytania do publiczności
+
+* Czy jesteś autorem biblioteki w npm?
+* Czy myślisz o stworzeniu takiej biblioteki?
+* Czy pisałeś kiedyś w TypeScript?
+* Z jakich edytorów korzystacie?
+
+---
+
+class: slide-background-green
+
+### Program
+
+* Co to jest DefinitelyTyped?
+* Jak zbudować definicję typów?
+* Jak się eksportuje obiekt z funkcjami, a jak zwykłą funkcje?
 
 ---
 
@@ -26,13 +46,12 @@ class CartService extends EventEmitter {
 }
 ```
 
-Could not find a declaration file for module 'super-event-emitter'. '/Users/piecioshka/projects-workshops/workshop-typescript-shop/node_modules/super-event-emitter/dist/super-event-emitter.js' implicitly has an 'any' type.
-  Try `npm install @types/super-event-emitter` if it exists or add a new declaration (.d.ts) file containing `declare module 'super-event-emitter';`
+Could not find a declaration file for module 'super-event-emitter'.
 
----
-
-jak się eksportuje obiekt z funkcjami, a jak zwykła funkcje
-
+```text
+'super-event-emitter/dist/super-event-emitter.js' implicitly has an 'any' type.
+Try `npm install @types/super-event-emitter` if it exists or add a new declaration (.d.ts) file containing `declare module 'super-event-emitter';`
+```
 
 ---
 
