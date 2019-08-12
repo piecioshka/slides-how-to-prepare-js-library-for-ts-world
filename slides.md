@@ -1,8 +1,16 @@
-class: middle, slide-invert-colors
+class: middle, slide-front-page, slide-invert-colors
 
-# slides-how-to-prepare-js-library-for-ts-world
+# Jak przygotować bibliotekę<br/>napisaną w <mark>JavaScript</mark>,<br/>na potrzeby projektu<br/>napisanego w <samp>TypeScript</samp>?
 
-## Subtitle
+<img src="images/my-logo/logo-piecioshka-white-text.svg" />
+
+---
+
+Jesteś autorem biblioteki w npm? Myślisz o stworzeniu takiej? Jeśli tak,
+to powinieneś pomyśleć o projektach napisanych w TypeScript, w których
+warto zadbać o odpowiednie DefinitelyTyped, tak aby edytory wiedziały,
+jak wygląda API Twojego liba. Podczas tej prelekcji dowiesz się, co to jest
+DefinitelyTyped, jak je zbudować dla swojej biblioteki.
 
 ---
 
@@ -39,6 +47,5 @@ class: middle, center, slide-invert-colors, no-display-my-logo
 />
 
 .size30[
-Proszę o rekomendację:
-[fb.com/piecioshka.trener](https://fb.com/piecioshka.trener)
+» [fb.com/piecioshka.trener](https://fb.com/piecioshka.trener) «
 ]

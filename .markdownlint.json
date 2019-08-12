@@ -3,6 +3,7 @@
     "no-bare-urls": true,
     "no-alt-text": false,
     "heading-increment": false,
+    "first-line-heading": false,
     "MD002": {
         "level": 1
     },

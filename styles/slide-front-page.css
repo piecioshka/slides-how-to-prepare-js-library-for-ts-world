@@ -1,0 +1,10 @@
+.slide-front-page h1 {
+    font-size: 60px !important;
+}
+
+.slide-front-page img {
+    width: 300px;
+    position: absolute;
+    right: 30px;
+    top: 230px;
+}
