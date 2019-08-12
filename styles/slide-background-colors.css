@@ -48,13 +48,13 @@
 
 .background-purple,
 .remark-slide-content.slide-background-purple {
-    background-color: #ab44b5;
+    background-color: #6c2b72;
     color: white;
 }
 
 .background-purple a,
 .remark-slide-content.slide-background-purple a {
-    color: #6c2b72;
+    color: #ab44b5;
 }
 
 .background-red,
@@ -81,11 +81,11 @@
 
 .background-green,
 .remark-slide-content.slide-background-green {
-    background-color: #83a956;
+    background-color: #364622;
     color: white;
 }
 
 .background-green a,
 .remark-slide-content.slide-background-green a {
-    color: #364622;
+    color: #83a956;
 }
