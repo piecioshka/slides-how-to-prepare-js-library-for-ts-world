@@ -1,6 +1,6 @@
 class: middle, slide-invert-colors
 
-# slides-how-to-fix-library-for-ts-world
+# slides-how-to-prepare-js-library-for-ts-world
 
 ## Subtitle
 

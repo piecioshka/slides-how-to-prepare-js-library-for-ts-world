@@ -1,10 +1,10 @@
-# slides-how-to-fix-library-for-ts-world
+# slides-how-to-prepare-js-library-for-ts-world
 
 :clipboard: Slides for TODO
 
 ## Preview
 
-<https://piecioshka.github.io/slides-how-to-fix-library-for-ts-world>
+<https://piecioshka.github.io/slides-how-to-prepare-js-library-for-ts-world>
 
 ## Organization logo
 

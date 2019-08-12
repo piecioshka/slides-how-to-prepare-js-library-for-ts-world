@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "slides-how-to-fix-library-for-ts-world",
+    "name": "slides-how-to-prepare-js-library-for-ts-world",
     "description": "",
     "version": "0.0.0",
     "license": "MIT",
@@ -14,6 +14,6 @@
     "devDependencies": {},
     "repository": {
         "type": "git",
-        "url": "git@github.com:piecioshka/slides-how-to-fix-library-for-ts-world.git"
+        "url": "git@github.com:piecioshka/slides-how-to-prepare-js-library-for-ts-world.git"
     }
 }
