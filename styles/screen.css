@@ -131,12 +131,6 @@ ins::selection {
     text-align: right;
 }
 
-.list-unstyled ol,
-.list-unstyled ul {
-    padding-left: 0;
-    list-style: none;
-}
-
 .left {
     float: left;
 }

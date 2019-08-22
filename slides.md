@@ -11,9 +11,63 @@ background-image: url(images/me.jpg)
 
 # O mnie
 
+???
+
+* Zawodowo od 2008
+* 300+ repozytoriów na `GitHub`
+* 30+ paczek w rejestrze `npm`
+
 ---
 
-class: slide-background-purple
+class: slide-columns-3, list-unstyled, list-circled
+
+### npm packages (=37)
+
+.size20[
+
+* vanilla-javascript
+* eslint-config-piecioshka
+* export-eslint-config
+* **[complete-string](https://github.com/piecioshka/complete-string)**
+* underscore.assert
+* underscore.slice
+* underscore-methods-usage-statistics
+* is-url-umd
+* super-event-emitter
+* **[html5-video-error-translator](https://github.com/piecioshka/html5-video-error-translator)**
+* gamepad-api
+* shower-gamepad
+* **[executor-editor](https://github.com/piecioshka/executor-editor)**
+* debug-umd
+* **[node-slice](https://github.com/piecioshka/node-slice)**
+* **[is-letter](https://github.com/piecioshka/is-letter)**
+* wooden-ladder
+* pokemon-picker
+* encoding-checker
+* github-track-followers
+* less-compile-file
+* boilerplate-babel-webpack
+* create-ts-project
+* move-master
+* **[mobile-keyboard-translator](https://github.com/piecioshka/mobile-keyboard-translator)**
+* makiwara
+* find-emails-in-string-cli
+* xhr-sniffer
+* **[simple-data-table](https://github.com/piecioshka/simple-data-table)**
+* xpath-to-css-template-string-tag
+* react-bounty
+* slider-before-after
+* solidarity-nodejs
+* solidarity-builder
+* github-contribution-stats-cli
+* find-google-docs-in-string
+* brute-force-generator
+
+]
+
+---
+
+class: slide-background-red
 
 ### Pytania do publiczności
 
@@ -24,34 +78,285 @@ class: slide-background-purple
 
 ---
 
-class: slide-background-green
+class: slide-background-purple
 
-### Program
+### 4 scenariusze
 
-* Co to jest DefinitelyTyped?
-* Jak zbudować definicję typów?
-* Jak się eksportuje obiekt z funkcjami, a jak zwykłą funkcje?
+.size40[
+
+* Brak definicji typów
+* Definicje typów są dostarczone razem z kompilatorem (tsc)
+* Biblioteka nie jest dostarczana z definicjami typów, ale można je zainstalować osobno
+* Biblioteka jest dostarczana z wbudowanymi własnymi definicjami typów
+
+]
 
 ---
 
+class: middle, slide-background-blue
+
+# _CommonJS_ vs _ES Module_
+
+---
+
+### Module definition: _CommonJS_
+
+.size30[
+
+```js
+// Plik: main.js
+const videos = require('./video-list');
+console.log(videos.length); // 3
+```
+
+```js
+// Plik: video-list.js
+module.exports = [
+    { title: 'Rocky', url: '' },
+    { title: 'Terminator', url: '' },
+    { title: 'Rambo', url: '' },
+];
+```
+
+]
+
+---
+
+### Module definition: _ECMAScript Modules_
+
+.size30[
+
+```js
+// Plik: main.js
+import videos from './video-list';
+console.log(videos.length); // 3
+```
+
+```js
+// Plik: video-list.js
+export default [
+    { title: 'Rocky', url: '' },
+    { title: 'Terminator', url: '' },
+    { title: 'Rambo', url: '' },
+];
+```
+
+]
+
+---
+
+class: middle, slide-background-blue
+
+# DefinitelyTyped
+
+Repozytorium dla _Type Definitions_.
+
+---
+
+class: slide-background-blue
+
+### Type Definitions
+
+* od TypeScript v2.0 bez `typings`
+* Nie definiujemy wartości
+* Strategie:
+    + Obok każdego pliku
+    + Jeden opisujący API
+* Domyślnie: `index.d.ts`
+* `package.json` — Klucz `types`
+* "Automatyczny" `@types/NAZWA_PAKIETU`
+
+---
+
+class: middle, slide-background-blue
+
+# types-publisher
+
+<https://github.com/Microsoft/types-publisher>
+
+---
+
+class: middle, slide-background-blue
+
+# TypeSearch
+
+<http://microsoft.github.io/TypeSearch/>
+
+---
+
+class: middle, slide-invert-colors
+
+# DEMO ✨ .size50[super-event-emitter @ 4.1.10]
+
+<https://www.npmjs.com/package/super-event-emitter>
+
+???
+
+* <https://github.com/piecioshka/demo-how-to-prepare-js-library-for-ts-world>
+* <https://github.com/piecioshka/super-event-emitter/compare/d8ca0847e0d2bb4add01571030eba933bb1d1cde..a41667e5b312fceafb10612aabd9dff12ac713d2>
+
+---
+
+class: slide-background-green
+
+### Wnioski
+
+* Zdefiniuj `index.d.ts`
+* Gdy eksportujesz moduł to:
+    + Zdefiniuje Moduł
+    + Eksportuj Klasy
+* Wspieraj:
+    + `default import`
+    + destructuring
+* Dodaj `index.d.ts` do plików paczki :)
+
+---
+
+class: middle, slide-invert-colors
+
+# DEMO ✨ .size60[complete-string @ 2.1.2]
+
+<https://www.npmjs.com/package/complete-string>
+
+???
+
+* <https://github.com/piecioshka/demo-how-to-prepare-js-library-for-ts-world>
+
+---
+
+class: slide-background-green
+
+### Wnioski
+
+* Wspieraj:
+    + `default import` — nie musisz znać API
+* Nie trzeba dodawać `index.d.ts` do `dist/`
+    + domyślnie jest brany plik `index.d.ts`
+* Dodaj `index.d.ts` do plików paczki :)
+
+---
+
+class: slide-background-purple
+
+### CommonJS, Klasa
+
+.half-width.left.p-1.size25[
+
 ```ts
-import { EventEmitter } from "super-event-emitter";
-
-class CartService extends EventEmitter {
-
-    addProduct(product: Product) {
-        this.emit('new-product', { product });
+// my-cookie/index.ts
+class Cookie {
+    cook() {
+        // ...
     }
+}
 
+module.exports = { Cookie };
+```
+
+]
+
+.half-width.left.p-1.size25[
+
+```ts
+// my-cookie/index.d.ts
+declare module "my-cookie" {
+    export class Cookie {
+        cook(): void;
+    }
 }
 ```
 
-Could not find a declaration file for module 'super-event-emitter'.
+]
 
-```text
-'super-event-emitter/dist/super-event-emitter.js' implicitly has an 'any' type.
-Try `npm install @types/super-event-emitter` if it exists or add a new declaration (.d.ts) file containing `declare module 'super-event-emitter';`
+---
+
+class: slide-background-purple
+
+### CommonJS, Obiekt
+
+.half-width.left.p-1.size25[
+
+```ts
+// my-cookie/index.ts
+module.exports = {
+    cook() {
+        // ...
+    }
+};
 ```
+
+]
+
+.half-width.left.p-1.size25[
+
+```ts
+// my-cookie/index.d.ts
+declare module 'my-cookie' {
+    namespace Cookie {
+        cook: () => void;
+    }
+    export = Cookie;
+};
+```
+
+]
+
+---
+
+class: slide-background-purple
+
+### ESM, Funkcja
+
+.size40[
+
+```ts
+// my-cookie/index.ts
+export function makeCookie() {
+    // ...
+}
+```
+
+```ts
+// my-cookie/index.d.ts
+export function makeCookie(): void;
+```
+
+]
+
+---
+
+class: middle, slide-background-blue
+
+# Module Augmentation
+
+---
+
+class: center
+
+<img
+    style="width: 500px;"
+    src="./images/screenshot.png"
+    />
+
+---
+
+class: middle, slide-background-blue
+
+## Generowanie _Type Definitions_
+
+.size50[
+
+```bash
+tsc --declaration index.ts
+```
+
+]
+
+---
+
+class: middle, slide-invert-colors
+
+# DEMO ✨
 
 ---
 
