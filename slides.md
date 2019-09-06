@@ -1,8 +1,15 @@
-class: middle, slide-front-page, slide-invert-colors
+class: slide-front-page
 
-# Jak przygotować bibliotekę<br/>napisaną w <mark>JavaScript</mark>,<br/>na potrzeby projektu<br/>napisanego w <samp>TypeScript</samp>?
-
-<img src="images/my-logo/logo-piecioshka-white-text.svg" />
+.logo[
+![](./images/warsawjs/logo.svg)
+]
+.details[
+![](images/piotr-kowalski.jpg)
+## Piotr Kowalski
+## <em>"Jak przygotować bibliotekę<br/>do projektu w <samp>TypeScript</samp>" [PL]</em>
+## <small>2019-09-11</small>
+## <a href="https://www.linkedin.com/in/piecioshka">linkedin.com/in/piecioshka</a>
+]
 
 ---
 
@@ -335,7 +342,7 @@ class: center
 
 <img
     style="width: 500px;"
-    src="./images/screenshot.png"
+    src="./images/screenshots/fb.png"
     />
 
 ---
