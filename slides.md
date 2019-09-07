@@ -6,27 +6,34 @@ class: slide-front-page
 .details[
 ![](images/piotr-kowalski.jpg)
 ## Piotr Kowalski
-## <em>"Jak przygotować bibliotekę<br/>do projektu w <samp>TypeScript</samp>" [PL]</em>
+## <em>"Jak przygotować bibliotekę<br/>do projektu w <del>TypeScript</del>" [PL]</em>
 ## <small>2019-09-11</small>
 ## <a href="https://www.linkedin.com/in/piecioshka">linkedin.com/in/piecioshka</a>
 ]
 
 ---
 
-class: middle, slide-invert-colors, slide-fullscreen-background
-background-image: url(images/me.jpg)
+WarsawJS TODO
 
-# O mnie
-
-???
-
-* Zawodowo od 2008
-* 300+ repozytoriów na `GitHub`
-* 30+ paczek w rejestrze `npm`
+1. Podłączyć kamerę internetową
+    + Zabrać gorilla pod
+2. Wykorzystać getUserMedia, aby podziękować społeczności
 
 ---
 
-class: slide-columns-3, list-unstyled, list-circled
+class: middle, slide-invert-colors
+background-image: url(images/me.jpg)
+background-size: contain
+
+# O mnie
+
+<del>Q</del> <i>Czy tworzyłeś software używając języka TypeScript?</i>
+
+---
+
+class: slide-columns-3, list-unstyled, list-circled, slide-background-green
+background-image: url(images/for-slides/IMG_0648.jpg)
+background-size: cover
 
 ### npm packages (=37)
 
@@ -72,41 +79,131 @@ class: slide-columns-3, list-unstyled, list-circled
 
 ]
 
----
-
-class: slide-background-red
-
-### Pytania do publiczności
-
-* Czy jesteś autorem biblioteki w npm?
-* Czy myślisz o stworzeniu takiej biblioteki?
-* Czy pisałeś kiedyś w TypeScript?
-* Z jakich edytorów korzystacie?
+.text-center[
+<del>Q</del> <i>Czy jesteś autorem biblioteki w npm?</i>
+]
 
 ---
 
-class: slide-background-purple
+class: slide-background-purple, slide-grid, slide-grid-2-columns, slide-grid-with-apla
+background-image: url(images/for-slides/IMG_0540.jpg)
+background-size: cover
 
-### 4 scenariusze
+### Scenariusze
 
-.size40[
+.grid-board.size35[
 
-* Brak definicji typów
-* Definicje typów są dostarczone razem z kompilatorem (tsc)
-* Biblioteka nie jest dostarczana z definicjami typów, ale można je zainstalować osobno
-* Biblioteka jest dostarczana z wbudowanymi własnymi definicjami typów
+`1` <del>Brak</del> definicji typów
+
+`2` Definicje typów <em>są dostarczone</em> razem z kompilatorem (`tsc`)
+
+`3` Biblioteka <mark>nie jest dostarczana</mark> z definicjami typów, ale można
+je zainstalować osobno
+
+`4` Biblioteka <var>jest dostarczana</var> z wbudowanymi własnymi definicjami typów
 
 ]
 
 ---
 
 class: middle, slide-background-blue
+background-image: url(images/for-slides/IMG_0861-winter.jpg)
+background-size: cover
 
-# _CommonJS_ vs _ES Module_
+# DefinitelyTyped
+
+Repozytorium dla _Type Definitions_.
+
+<del>Q</del> <i>Czy ktoś słyszał o DT?</i>
 
 ---
 
-### Module definition: _CommonJS_
+class: slide-background-blue
+background-image: url(images/for-slides/IMG_0861-winter.jpg)
+background-size: cover
+
+### Type Definitions
+
+.size40[
+
+* Definiujemy _sygnatury_ oraz _strukturę_ obiektów
+* Nie definiujemy wartości
+* Od TypeScript v2.0 bez _typings_
+* _index.d.ts_
+    + Domyślnie
+    + _package.json_ » _types_
+
+]
+
+.text-center[
+<del>Q</del> <i>Czy ktoś używał "typings"?</i>
+]
+
+---
+
+class: slide-background-blue
+background-image: url(images/for-slides/IMG_0861-winter.jpg)
+background-size: cover
+
+### Type Definitions _Przykład_
+
+.size25[
+
+```ts
+type Handler = (payload?: any) => void;
+
+declare module "super-event-emitter" {
+
+  export class EventEmitter {
+    on(name: string, fn: Handler, context?: any): EventEmitter;
+    once(name: string, fn: Handler, context?: any): EventEmitter;
+    off(name?: string, fn?: Handler): EventEmitter;
+    emit(name: string, params?: any): EventEmitter;
+
+    static mixin(target: T): T;
+    static VERSION: string;
+  }
+
+  export default EventEmitter;
+}
+```
+
+]
+
+---
+
+class: middle, slide-background-blue
+background-image: url(images/for-slides/IMG_0861-winter.jpg)
+background-size: cover
+
+### Automatyzacja
+
+.size40[
+
+* `@types/NAZWA_PAKIETU`
+* [types-publisher](https://github.com/Microsoft/types-publisher)
+* [TypeSearch](http://microsoft.github.io/TypeSearch/)
+
+]
+
+.text-center[
+<del>Q</del> <i>Z jakich edytorów korzystacie?</i>
+]
+
+---
+
+class: middle, no-display-my-logo
+background-image: url(images/for-slides/IMG_0704.jpg)
+background-size: cover
+
+## <mark>CommonJS Modules</mark> vs <mark>ECMAScript Modules</mark>
+
+---
+
+background-image: url(images/for-slides/IMG_0704.jpg)
+background-size: cover
+
+### <mark>CommonJS Modules</mark> definition
 
 .size30[
 
@@ -129,7 +226,10 @@ module.exports = [
 
 ---
 
-### Module definition: _ECMAScript Modules_
+background-image: url(images/for-slides/IMG_0704.jpg)
+background-size: cover
+
+### <mark>ECMAScript Modules</mark> definition
 
 .size30[
 
@@ -152,59 +252,18 @@ export default [
 
 ---
 
-class: middle, slide-background-blue
-
-# DefinitelyTyped
-
-Repozytorium dla _Type Definitions_.
-
----
-
-class: slide-background-blue
-
-### Type Definitions
-
-* od TypeScript v2.0 bez `typings`
-* Nie definiujemy wartości
-* Strategie:
-    + Obok każdego pliku
-    + Jeden opisujący API
-* Domyślnie: `index.d.ts`
-* `package.json` — Klucz `types`
-* "Automatyczny" `@types/NAZWA_PAKIETU`
-
----
-
-class: middle, slide-background-blue
-
-# types-publisher
-
-<https://github.com/Microsoft/types-publisher>
-
----
-
-class: middle, slide-background-blue
-
-# TypeSearch
-
-<http://microsoft.github.io/TypeSearch/>
-
----
-
 class: middle, slide-invert-colors
 
-# DEMO ✨ .size50[super-event-emitter @ 4.1.10]
+# DEMO ✨ #1
 
-<https://www.npmjs.com/package/super-event-emitter>
-
-???
-
-* <https://github.com/piecioshka/demo-how-to-prepare-js-library-for-ts-world>
-* <https://github.com/piecioshka/super-event-emitter/compare/d8ca0847e0d2bb4add01571030eba933bb1d1cde..a41667e5b312fceafb10612aabd9dff12ac713d2>
+* [super-event-emitter](https://www.npmjs.com/package/super-event-emitter)
+* [4.1.10 vs 4.1.12](https://github.com/piecioshka/super-event-emitter/compare/d8ca0847e0d2bb4add01571030eba933bb1d1cde..a41667e5b312fceafb10612aabd9dff12ac713d2)
 
 ---
 
 class: slide-background-green
+background-image: url(images/for-slides/IMG_0757.jpg)
+background-size: cover
 
 ### Wnioski
 
@@ -219,31 +278,9 @@ class: slide-background-green
 
 ---
 
-class: middle, slide-invert-colors
-
-# DEMO ✨ .size60[complete-string @ 2.1.2]
-
-<https://www.npmjs.com/package/complete-string>
-
-???
-
-* <https://github.com/piecioshka/demo-how-to-prepare-js-library-for-ts-world>
-
----
-
-class: slide-background-green
-
-### Wnioski
-
-* Wspieraj:
-    + `default import` — nie musisz znać API
-* Nie trzeba dodawać `index.d.ts` do `dist/`
-    + domyślnie jest brany plik `index.d.ts`
-* Dodaj `index.d.ts` do plików paczki :)
-
----
-
 class: slide-background-purple
+background-image: url(images/for-slides/IMG_0772.jpg)
+background-size: cover
 
 ### CommonJS, Klasa
 
@@ -267,9 +304,11 @@ module.exports = { Cookie };
 ```ts
 // my-cookie/index.d.ts
 declare module "my-cookie" {
+
     export class Cookie {
         cook(): void;
     }
+
 }
 ```
 
@@ -278,6 +317,8 @@ declare module "my-cookie" {
 ---
 
 class: slide-background-purple
+background-image: url(images/for-slides/IMG_0772.jpg)
+background-size: cover
 
 ### CommonJS, Obiekt
 
@@ -285,11 +326,13 @@ class: slide-background-purple
 
 ```ts
 // my-cookie/index.ts
-module.exports = {
+const Cookie = {
     cook() {
         // ...
     }
 };
+
+module.exports = Cookie;
 ```
 
 ]
@@ -298,12 +341,13 @@ module.exports = {
 
 ```ts
 // my-cookie/index.d.ts
-declare module 'my-cookie' {
+declare module "my-cookie" {
     namespace Cookie {
         cook: () => void;
     }
+
     export = Cookie;
-};
+}
 ```
 
 ]
@@ -311,43 +355,48 @@ declare module 'my-cookie' {
 ---
 
 class: slide-background-purple
+background-image: url(images/for-slides/IMG_0772.jpg)
+background-size: cover
 
 ### ESM, Funkcja
 
-.size40[
+.half-width.left.p-1.size25[
 
 ```ts
 // my-cookie/index.ts
-export function makeCookie() {
+export function cook() {
     // ...
 }
 ```
 
+]
+
+.half-width.left.p-1.size25[
+
 ```ts
 // my-cookie/index.d.ts
-export function makeCookie(): void;
+export function cook(): void;
+
+                                //
 ```
 
 ]
 
 ---
 
-class: middle, slide-background-blue
-
-# Module Augmentation
-
----
-
 class: center
+background-color: #e9ebee
 
 <img
-    style="width: 500px;"
+    style="width: 700px;"
     src="./images/screenshots/fb.png"
     />
 
 ---
 
 class: middle, slide-background-blue
+background-image: url(images/for-slides/IMG_0861-winter.jpg)
+background-size: cover
 
 ## Generowanie _Type Definitions_
 
@@ -363,13 +412,27 @@ tsc --declaration index.ts
 
 class: middle, slide-invert-colors
 
-# DEMO ✨
+# DEMO ✨ #2
+
+---
+
+class: middle, slide-background-blue
+background-image: url(images/for-slides/IMG_0861-winter.jpg)
+background-size: cover
+
+# Module Augmentation
+
+---
+
+class: middle, slide-invert-colors
+
+# DEMO ✨ #3
 
 ---
 
 class: middle, center, slide-invert-colors, no-display-my-logo
 
-# <samp>Dziękuję!</samp>
+# <del>Dziękuję!</del>
 
 <img
     src="images/my-logo/logo-piecioshka-white-text.svg"
@@ -380,3 +443,12 @@ class: middle, center, slide-invert-colors, no-display-my-logo
 .size30[
 » [fb.com/piecioshka.trener](https://fb.com/piecioshka.trener) «
 ]
+
+---
+
+class: middle
+
+# Thanks
+
+Rob Obręczarek
+TODO: photo

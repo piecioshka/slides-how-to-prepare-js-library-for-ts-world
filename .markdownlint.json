@@ -36,11 +36,15 @@
             "span",
             "small",
             "mark",
+            "del",
             "samp",
+            "em",
+            "i",
             "var",
             "img",
             "kbd",
-            "ins"
+            "ins",
+            "div"
         ]
     }
 }
