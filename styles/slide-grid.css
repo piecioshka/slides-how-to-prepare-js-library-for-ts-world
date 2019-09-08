@@ -19,6 +19,16 @@
     grid-template-rows: auto;
 }
 
+.slide-grid-4-columns .grid-board {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+}
+
+.slide-grid-5-columns .grid-board {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+}
+
 /* -------------------------------------------------------------------------- */
 
 .slide-grid-with-apla .grid-board p {

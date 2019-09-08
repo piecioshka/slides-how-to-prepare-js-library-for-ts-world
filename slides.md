@@ -6,7 +6,7 @@ class: slide-front-page
 .details[
 ![](images/piotr-kowalski.jpg)
 ## Piotr Kowalski
-## <em>"Jak przygotować bibliotekę<br/>do projektu w <del>TypeScript</del>" [PL]</em>
+## <em>"Jak przygotować paczkę do projektu w <del>TypeScript</del>" [PL]</em>
 ## <small>2019-09-11</small>
 ## <a href="https://www.linkedin.com/in/piecioshka">linkedin.com/in/piecioshka</a>
 ]
