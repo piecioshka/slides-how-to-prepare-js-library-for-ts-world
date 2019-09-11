@@ -44,7 +44,8 @@
             "img",
             "kbd",
             "ins",
-            "div"
+            "div",
+            "iframe"
         ]
     }
 }

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.slide-thanks h1{
+    margin-bottom: 0;
+}
+
+.slide-thanks iframe {
+    border: 3px solid;
+    width: calc(800px - 2*3px);
+    height: 450px
+}

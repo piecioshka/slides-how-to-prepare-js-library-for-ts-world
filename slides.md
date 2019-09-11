@@ -13,11 +13,11 @@ class: slide-front-page
 
 ---
 
-WarsawJS TODO
+class: center, slide-background-red, slide-thanks
 
-1. Podłączyć kamerę internetową
-    + Zabrać gorilla pod
-2. Wykorzystać getUserMedia, aby podziękować społeczności
+# Dziękuję ❤️
+
+<iframe src="/test-get-user-media/"></iframe>
 
 ---
 
@@ -192,7 +192,7 @@ background-size: cover
 
 ---
 
-class: middle, no-display-my-logo
+class: middle, center, no-display-my-logo, slide-invert-colors
 background-image: url(images/for-slides/IMG_0704.jpg)
 background-size: cover
 
@@ -200,6 +200,7 @@ background-size: cover
 
 ---
 
+class: slide-invert-colors
 background-image: url(images/for-slides/IMG_0704.jpg)
 background-size: cover
 
@@ -226,6 +227,7 @@ module.exports = [
 
 ---
 
+class: slide-invert-colors
 background-image: url(images/for-slides/IMG_0704.jpg)
 background-size: cover
 
@@ -398,7 +400,7 @@ class: middle, slide-background-blue
 background-image: url(images/for-slides/IMG_0861-winter.jpg)
 background-size: cover
 
-## Generowanie _Type Definitions_
+## **Generowanie _Type Definitions_**
 
 .size50[
 
@@ -446,9 +448,16 @@ class: middle, center, slide-invert-colors, no-display-my-logo
 
 ---
 
-class: middle
+class: slide-invert-colors, no-display-my-logo
+background-image: url(images/with-team.jpg)
+background-size: cover
 
-# Thanks
+# Thanks<br/><del>Team</del>
 
-Rob Obręczarek
-TODO: photo
+---
+
+class: slide-invert-colors, no-display-my-logo
+background-image: url(images/with-rob.jpg)
+background-size: cover
+
+# Thanks<br/><em>Rob</em>
