@@ -2,7 +2,7 @@
 
 :clipboard: Slides for talk about `DefinitelyTyped`.
 
-## Preview
+## Preview 🎉
 
 <https://piecioshka.github.io/slides-how-to-prepare-js-library-for-ts-world>
 
